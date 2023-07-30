@@ -12,7 +12,8 @@ app.use(bodyParser.urlencoded({extended : true}));
 app.use(express.static("public"));
 
 //Connecting to the database and creating the table schema
-mongoose.connect("mongodb+srv://rajadarsh268:adarsh_2608@cluster0.t3cihiw.mongodb.net/demoDb").then(() => {
+url=process.env.URL
+mongoose.connect(url).then(() => {
     console.log("Connected to MongoDB!")
 }).catch((err) => {
     console.log(err)
