@@ -13,7 +13,7 @@ app.use(express.static("public"));
 
 //Connecting to the database and creating the table schema
 
-mongoose.connect("mongodb+srv://rajadarsh268:adarsh_2608@cluster0.t3cihiw.mongodb.net/demoDb").then(() => {
+mongoose.connect("mongodb://127.0.0.1:27017/demoDb").then(() => {
     console.log("Connected to MongoDB!")
 }).catch((err) => {
     console.log(err)
